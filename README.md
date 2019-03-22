@@ -1,13 +1,15 @@
 # gcn-tensorflow代码学习记录
 
 * 代码来自: https://github.com/tkipf/gcn
+
+```
 @inproceedings{kipf2017semi,
   title={Semi-Supervised Classification with Graph Convolutional Networks},
   author={Kipf, Thomas N. and Welling, Max},
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2017}
 }
-
+```
 没有完全懂GCN相关内容，但大体跑通了这份代码，相关记录如下。
 
 ## 数据
@@ -26,8 +28,11 @@
 
     * 关于cora数据的描述，可参见https://linqs.soe.ucsc.edu/data。原文对数据的描述是：
     
-    ```angular2html
-The Cora dataset consists of 2708 scientific publications classified into one of seven classes. The citation network consists of 5429 links. Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. The dictionary consists of 1433 unique words. The README file in the dataset provides more details. 
+    ```
+      The Cora dataset consists of 2708 scientific publications classified into one of seven classes. 
+      The citation network consists of 5429 links. 
+      Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. 
+      The dictionary consists of 1433 unique words.  
     ```
     
     * 也就是说，数据集中包括2708个分别属于7个种类的科学出版商；整个数据集包括1433个不重复的word,每个publication是基于1433个word的onehot编码来表示的。
